@@ -10,9 +10,19 @@ class MailController extends Controller
 {
     public function sendform(Request $request)
     {
-       $name = $request->username;
 
-       Mail::to('1184mak@gmail.com')->send(new MailUser($name));
-     //   Mail::to('mak1184@mail.ru')->send(new MailUser($name));
+        $destination = $request->destination;
+        $user_name = $request->user_name;
+        $user_address = $request->user_address;
+        $user_mail = $request->user_mail;
+        $user_text = $request->user_text;
+        $user_image = $request->user_image;
+
+
+
+        Mail::to('1184mak@gmail.com')->send(new MailUser($destination, $user_name,
+            $user_address, $user_mail, $user_text, $user_image));
+
+        echo "Письмо отправлено успешно!";
     }
 }

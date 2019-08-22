@@ -45,59 +45,63 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Электронное обращение</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Электронное обращение (для граждан)</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body" >
-                    <form method="POST" action="{{route('send-mail')}}">
+                <div class="modal-body was-validated" >
+                    <form enctype="multipart/form-data" method="POST" action="{{route('send-mail')}}" >
                         @csrf
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="recipiente">Кому:*</label>
                             </div>
-                            <select class="custom-select" id="recipiente">
-                                <option selected>Выбрать...</option>
-                                <option value="1">Генеральному директору КПУП "Гомельское городское ЖКХ" Кулаго В.А.</option>
-                                <option value="2">Руководителю КЖРЭУП "Новобелицкое"</option>
-                                <option value="3">Руководителю КЖРЭУП "Центральное"</option>
-                                <option value="4">Руководителю КЖРЭУП "Советское"</option>
-                                <option value="5">Руководителю КЖРЭУП "Железнодорожное"</option>
-                                <option value="6">Руководителю КЖРЭУП "Сельмашевское"</option>
-                                <option value="7">Руководителю КУП "Расчетно-справочный центр г. Гомеля"</option>
-                                <option value="8">Руководителю КАУП по СД "ГорСАП"</option>
-                                <option value="9">Руководителю КУП "Спецкоммунтранс"</option>
-                                <option value="10">Руководителю КУП "Гомельский городской дорожный строительно-ремонтный трест"</option>
-                                <option value="11">Руководителю КПУП "Гомельводоканал"</option>
-                                <option value="12">Руководителю КУП "Горэлектротранспорт"</option>
-                                <option value="13">Руководителю КСУП "Городской центр оздоровления"</option>
-                                <option value="14">Руководителю ДКПУП "Гомельгорсвет"</option>
-                                <option value="15">Руководителю ДКСУП "Красная гвоздика"</option>
-                                <option value="16">Руководителю ОАО "Гомельремстрой"</option>
-                                <option value="17">Руководителю ОАО "Гомельский специализированный комбинат"</option>
-                                <option value="18">Руководителю ОАО "Отель"</option>
+                            <select name="destination" class="custom-select" id="recipiente" required>
+                                <option value="" selected>Выбрать...</option>
+                                <option value="Генеральному директору Кулаго В.А.">Генеральному директору КПУП "Гомельское городское ЖКХ" Кулаго В.А.</option>
+                                <option value="Руководителю КЖРЭУП Новобелицкое">Руководителю КЖРЭУП "Новобелицкое"</option>
+                                <option value="Руководителю КЖРЭУП Центральное">Руководителю КЖРЭУП "Центральное"</option>
+                                <option value="Руководителю КЖРЭУП Советское">Руководителю КЖРЭУП "Советское"</option>
+                                <option value="Руководителю КЖРЭУП Железнодорожное">Руководителю КЖРЭУП "Железнодорожное"</option>
+                                <option value="Руководителю КЖРЭУП Сельмашевское">Руководителю КЖРЭУП "Сельмашевское"</option>
+                                <option value="Руководителю КУП Расчетно-справочный центр г. Гомеля">Руководителю КУП "Расчетно-справочный центр г. Гомеля"</option>
+                                <option value="Руководителю КАУП по СД ГорСАП">Руководителю КАУП по СД "ГорСАП"</option>
+                                <option value="Руководителю КУП Спецкоммунтранс">Руководителю КУП "Спецкоммунтранс"</option>
+                                <option value="Руководителю КУП Гомельский городской дорожный строительно-ремонтный трест">Руководителю КУП "Гомельский городской дорожный строительно-ремонтный трест"</option>
+                                <option value="Руководителю КПУП Гомельводоканал">Руководителю КПУП "Гомельводоканал"</option>
+                                <option value="Руководителю КУП Горэлектротранспорт">Руководителю КУП "Горэлектротранспорт"</option>
+                                <option value="Руководителю КСУП Городской центр оздоровления">Руководителю КСУП "Городской центр оздоровления"</option>
+                                <option value="Руководителю ДКПУП Гомельгорсвет">Руководителю ДКПУП "Гомельгорсвет"</option>
+                                <option value="Руководителю ДКСУП Красная гвоздика">Руководителю ДКСУП "Красная гвоздика"</option>
+                                <option value="Руководителю ОАО Гомельремстрой">Руководителю ОАО "Гомельремстрой"</option>
+                                <option value="Руководителю ОАО Гомельский специализированный комбинат">Руководителю ОАО "Гомельский специализированный комбинат"</option>
+                                <option value="Руководителю ОАО Отель">Руководителю ОАО "Отель"</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">ФИО:*</label>
-                            <input type="text" name="username" class="form-control" id="validationTooltip01">
+                            <input type="text" name="user_name" class="form-control" id="validationTooltip01" placeholder="Иванов Иван Петрович" required>
+
                             <label for="recipient-name" class="col-form-label">Почтовый адрес (адрес места
                                 жительства (места пребывания) и(или) места работы (учебы)):*</label>
-                            <input type="text" class="form-control" id="user-address">
-                            <label for="recipient-name" class="col-form-label">Адрес электронной почты:*</label>
-                            <input type="text" class="form-control" id="user-email">
+                            <input name="user_address" type="text" class="form-control" id="user-address" required>
 
+                            <label for="recipient-name" class="col-form-label">Адрес электронной почты:*</label>
+                            <input name="user_mail" type="email" class="form-control" id="user-email"
+                                   placeholder="yourmail@example.by" required>
                         </div>
 
                             <div class="form-group">
-                                <label for="message-text" class="col-form-label">Текст обращения:*</label>
-                                <textarea class="form-control" id="message-text"></textarea>
+                                <label for="validationTextarea" class="col-form-label">Текст обращения:*</label>
+                                <textarea name="user_text" class="form-control is-invalid" id="validationTextarea" required></textarea>
                             </div>
                         <div class="form-group">
-                            <label for="exampleFormControlFile1">Example file input</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <label for="exampleFormControlFile1">Прикрепить jpeg-изображение (не более 2MB):</label>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+                            <input name="user_image" type="file" accept="image/jpeg"
+                                   class="form-control-file" id="exampleFormControlFile1">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -119,7 +123,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Электронное обращение</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Электронное обращение (для юрлиц и ИП)</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -178,5 +182,7 @@
             </div>
         </div>
     </div>
+
+
 
 @endsection

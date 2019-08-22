@@ -75,12 +75,12 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img height="150px" src="{{ URL::to('/images/carousel/1.jpg') }}" class="d-block w-100"
-                             alt="...">
+                        <img height="150px" src="{{ URL::to('/images/carousel/1.jpg') }}"
+                             class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img height="150px" src="{{ URL::to('/images/carousel/2.jpg') }}" class="d-block w-100"
-                             alt="...">
+                        <img height="150px" src="{{ URL::to('/images/carousel/2.jpg') }}"
+                             class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img height="150px" src="{{ URL::to('/images/carousel/3.jpg') }}"
@@ -154,6 +154,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+
+
 </div>
 </body>
 </html>
