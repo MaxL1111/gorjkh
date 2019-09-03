@@ -36,31 +36,21 @@
 
     <table>
         <tr>
-            <th colspan="2">Электронное обращение ( {{$userCitizen}} )</th>
+            <th colspan="2">Рубрика вопрос-ответ</th>
         </tr>
-        <tr>
-            <td>Кому:</td>
-            <td>{{$destination}}</td>
-        </tr>
-        <tr>
-            <td>{{$organizationHeading}}</td>
-            <td>{{$organizationName}}</td>
-        </tr>
+
         <tr>
             <td>ФИО:</td>
             <td> {{$userName}}</td>
         </tr>
-        <tr>
-            <td>Почтовый адрес:</td>
-            <td> {{$userAddress}}</td>
-        </tr>
+
         <tr>
             <td>Адрес электронной почты:</td>
             <td> {{$userMail}}</td>
         </tr>
         <tr>
-            <td>Текст обращения:</td>
-            <td> {{$userText}}</td>
+            <td>Вопрос:</td>
+            <td> {{$userQuestion}}</td>
         </tr>
 
     </table>
