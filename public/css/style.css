@@ -26,3 +26,31 @@ a #left_navbar {
 }
 
 
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 250px;
+    height: 100px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 100px;
+    font-size: 80px;
+    color: white;
+}

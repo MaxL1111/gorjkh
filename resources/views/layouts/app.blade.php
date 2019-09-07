@@ -7,6 +7,8 @@
 
     <link href="/css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,8 +19,7 @@
 
     <title>@yield('title')</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
 </head>
@@ -78,37 +79,19 @@
         <br>
 
         <div class="container-fluid">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img height="150px" src="{{ URL::to('/images/carousel/1.jpg') }}"
-                             class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img height="150px" src="{{ URL::to('/images/carousel/2.jpg') }}"
-                             class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img height="150px" src="{{ URL::to('/images/carousel/3.jpg') }}"
-                             class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            <!-- Flickity HTML init -->
+            <div class="carousel"
+                 data-flickity='{ "wrapAround": true }'>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
             </div>
+
         </div>
 
+        <br>
         <br>
         <div class="container-fluid">
             <div class="shadow-none p-3 mb-5 bg-light rounded">
@@ -127,14 +110,14 @@
                     <div id="" class="nav-link font-weight-bold list-group list-group-flush">
 
                         <a id="left_navbar" href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
-                        <a href="#" class="text-dark nav-link list-group-item">Диспетчерская</a>
+                        <a href="{{'/dispatcher'}}" class="text-dark nav-link list-group-item">Диспетчерская</a>
                         <a href="#" class="text-dark nav-link list-group-item">Тарифы</a>
                         <a href="#" class="text-dark nav-link list-group-item">Спорт</a>
                         <a href="#" class="text-dark nav-link list-group-item">Документы</a>
                         <a href="{{'/contacts'}}" class="text-dark nav-link list-group-item">Контакты</a>
                         <a href="{{'/appeals'}}" class="text-dark nav-link list-group-item">Обращения</a>
                         <a href="#" class="text-dark nav-link list-group-item">Отделы</a>
-                        <a href="#" class="text-dark nav-link list-group-item">О нас</a>
+                        <a href="{{'/about'}}" class="text-dark nav-link list-group-item">О нас</a>
                     </div>
                 </div>
 
@@ -151,11 +134,11 @@
         </div>
     </div>
 
-    @section('footer')
+@section('footer')
 
-    @show
+@show
 
-    <!-- Optional JavaScript -->
+<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -164,7 +147,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/js/ajax.js"></script>
+    <script type="text/javascript" src="/js/ajax.js"></script>
+
+    <script type="text/javascript" src="/js/my.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </div>
 </body>

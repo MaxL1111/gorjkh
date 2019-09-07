@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/dispatcher', function () {
+    return view('dispatcher');
+});
+
 Route::get('/appeals', function () {
     return view('appeals');
 });
@@ -23,6 +27,9 @@ Route::get('/contacts', function () {
     return view('contacts');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
 
 Route::get('/question', 'QuestionController@findall');
 
