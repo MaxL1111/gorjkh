@@ -21,36 +21,13 @@
     color: #f00;
 }
 
-a #left_navbar {
+#about_icon {
+    font-size: 25pt;
+    text-align: center;
+}
+
+
+#left_navbar a {
     color: #4c110f;
 }
 
-
-/* external css: flickity.css */
-
-* { box-sizing: border-box; }
-
-body { font-family: sans-serif; }
-
-.carousel {
-    background: #EEE;
-}
-
-.carousel-cell {
-    width: 250px;
-    height: 100px;
-    margin-right: 10px;
-    background: #8C8;
-    border-radius: 5px;
-    counter-increment: carousel-cell;
-}
-
-/* cell number */
-.carousel-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(carousel-cell);
-    line-height: 100px;
-    font-size: 80px;
-    color: white;
-}

@@ -7,8 +7,6 @@
 
     <link href="/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -78,18 +76,6 @@
         </nav>
         <br>
 
-        <div class="container-fluid">
-            <!-- Flickity HTML init -->
-            <div class="carousel"
-                 data-flickity='{ "wrapAround": true }'>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-            </div>
-
-        </div>
 
         <br>
         <br>
@@ -107,7 +93,7 @@
 
             <div class="col-lg-2">
                 <div class="row">
-                    <div id="" class="nav-link font-weight-bold list-group list-group-flush">
+                    <div id="left_navbar" class="nav-link font-weight-bold list-group list-group-flush">
 
                         <a id="left_navbar" href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
                         <a href="{{'/dispatcher'}}" class="text-dark nav-link list-group-item">Диспетчерская</a>
@@ -150,7 +136,7 @@
     <script type="text/javascript" src="/js/ajax.js"></script>
 
     <script type="text/javascript" src="/js/my.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 
 </div>
 </body>
