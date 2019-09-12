@@ -21,8 +21,8 @@
 
 
 </head>
-<body>
-<div class="container">
+<body id="body">
+<div id="main_style" class="container">
     @section('navbar')
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -76,15 +76,9 @@
         </nav>
         <br>
 
-
-        <br>
-        <br>
-        <div class="container-fluid">
-            <div class="shadow-none p-3 mb-5 bg-light rounded">
-                <h2><strong>Коммунальное производственное унитарное предприятие "Гомельское городское ЖКХ"</strong></h2>
-            </div>
+        <div class="shadow-none p-3 mb-5 bg-light rounded">
+            <h2><strong>Коммунальное производственное унитарное предприятие "Гомельское городское ЖКХ"</strong></h2>
         </div>
-
 
     @show
 
@@ -95,7 +89,7 @@
                 <div class="row">
                     <div id="left_navbar" class="nav-link font-weight-bold list-group list-group-flush">
 
-                        <a id="left_navbar" href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
+                        <a href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
                         <a href="{{'/dispatcher'}}" class="text-dark nav-link list-group-item">Диспетчерская</a>
                         <a href="#" class="text-dark nav-link list-group-item">Тарифы</a>
                         <a href="#" class="text-dark nav-link list-group-item">Спорт</a>
@@ -121,6 +115,61 @@
     </div>
 
 @section('footer')
+
+    <div id="footer">
+
+        <p><strong>Официальный сайт КПУП "Гомельское городское ЖКХ"</strong>
+            <br>
+        <span id="footer_text_small" class="small">246050, Республика Беларусь, г.Гомель, ул.Советская, д.12</span>
+        </p>
+
+            <div  class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <p><strong>Новости</strong></p>
+                        <ul id="footer_list" class="list-unstyled">
+                            <li>Культура</li>
+                            <li>Транспорт</li>
+                            <li>Строительство</li>
+                            <li>Городское хозяйство</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <p><strong>Услуги</strong></p>
+                        <ul id="footer_list" class="list-unstyled">
+                            <li>Аренда</li>
+                            <li>Qwerty i am</li>
+                            <li>Qwerty i am</li>
+                            <li>Qwerty i am</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <p><strong>Афиша</strong></p>
+                        <ul id="footer_list" class="list-unstyled">
+                            <li>Qwerty i am</li>
+                            <li>Qwerty i am</li>
+                            <li>Qwerty i am</li>
+                            <li>Qwerty i am</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <p><strong>Афиша</strong></p>
+                        <ul id="footer_list" class="list-unstyled">
+                            <li>Все события</li>
+                            <li>Спектакли</li>
+                            <li>Выставки</li>
+                            <li>Концерты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        <hr id="line">
+
+        <span id="footer_text_small"><strong>Соглашение о пользовании информационными системами и ресурсами города Гомеля</strong></span>
+
+    </div>
+
 
 @show
 

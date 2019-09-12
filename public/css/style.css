@@ -1,3 +1,11 @@
+#body{
+    background-color: #D0D0D0;
+}
+
+#main_style{
+    background-color: #ffffff;
+}
+
 #sendmessage, #sendmessage2, #sendmessage3 {
     border: 1px solid #e6e6e6;
     background: #f6f6f6;
@@ -27,7 +35,36 @@
 }
 
 
-#left_navbar a {
-    color: #4c110f;
+/* страница main */
+
+#line_main{
+    border: none; /* Убираем границу */
+    background-color: #333333; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+}
+
+
+/* блок footer */
+#footer{
+    padding: 24px 28px;
+    background-color: #171919;
+    color: #FFFFFF;
+}
+
+#footer_text_small{
+    color: #8D939C;
+}
+
+#footer_list{
+    color: #8D939C;
+    font-size: 14px;
+}
+
+#line{
+    border: none; /* Убираем границу */
+    background-color: #474747; /* Цвет линии */
+    color: #6c757d; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
 }
 

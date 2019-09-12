@@ -38,3 +38,10 @@ Route::get('/question', 'QuestionController@findall');
 
 Route::post('/sendmail', 'MailController@sendform');
 Route::post('/sendquestion', 'MailController@sendquestion');
+
+// скачивание пользователем файлов с сервера
+
+Route::get('/download/{file_name}', 'DownloadController@getDownload');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
