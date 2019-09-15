@@ -31,7 +31,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/question', 'QuestionController@findall');
+Route::get('/question', 'QuestionController@all_question');
 
 
 //Route::post('/',['uses'=>'MailController@sendform', 'as'=>'send-mail']);
@@ -42,6 +42,13 @@ Route::post('/sendquestion', 'MailController@sendquestion');
 // скачивание пользователем файлов с сервера
 
 Route::get('/download/{file_name}', 'DownloadController@getDownload');
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/adminpanel', 'AdminController@all_question'
+    // Только аутентифицированные пользователи могут зайти...
+)->middleware('auth');

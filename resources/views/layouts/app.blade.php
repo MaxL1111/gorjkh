@@ -22,7 +22,7 @@
 
 </head>
 <body id="body">
-<div id="main_style" class="container">
+<div id="main_style" class="container-fluid">
     @section('navbar')
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -165,7 +165,6 @@
             </div>
 
         <hr id="line">
-
         <span id="footer_text_small"><strong>Соглашение о пользовании информационными системами и ресурсами города Гомеля</strong></span>
 
     </div>
