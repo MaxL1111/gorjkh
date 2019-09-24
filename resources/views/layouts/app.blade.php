@@ -92,7 +92,7 @@
                         <a href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
                         <a href="{{'/dispatcher'}}" class="text-dark nav-link list-group-item">Диспетчерская</a>
                         <a href="#" class="text-dark nav-link list-group-item">Тарифы</a>
-                        <a href="#" class="text-dark nav-link list-group-item">Спорт</a>
+                        <a href="{{'/sport'}}" class="text-dark nav-link list-group-item">Спорт</a>
                         <a href="#" class="text-dark nav-link list-group-item">Документы</a>
                         <a href="{{'/contacts'}}" class="text-dark nav-link list-group-item">Контакты</a>
                         <a href="{{'/appeals'}}" class="text-dark nav-link list-group-item">Обращения</a>

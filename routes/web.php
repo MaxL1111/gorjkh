@@ -31,6 +31,11 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/sport', function () {
+    return view('sport');
+});
+
+
 Route::get('/question', 'QuestionController@all_question');
 
 
@@ -39,8 +44,15 @@ Route::get('/question', 'QuestionController@all_question');
 Route::post('/sendmail', 'MailController@sendform');
 Route::post('/sendquestion', 'MailController@sendquestion');
 
-// скачивание пользователем файлов с сервера
 
+//добавление новой записи в таблицу questions
+Route::post('/add_question_answer', 'AdminController@add_question_answer');
+
+//удаление записи из таблицы questions
+Route::get('/delete_question_answer/{id}', 'AdminController@delete_question_answer');
+
+
+//скачивание пользователем файлов с сервера
 Route::get('/download/{file_name}', 'DownloadController@getDownload');
 
 

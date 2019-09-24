@@ -9,6 +9,68 @@
     </p>
 
 
+    <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal"
+            data-target="#exampleModal5" data-whatever="@mdo">
+        Добавить вопрос-ответ <i class="far fa-hand-point-up"></i>
+    </button>
+
+    <br>
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Рубрика Спрашивайте - Ответим</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body was-validated">
+
+                    <form id="form_admin_question_answer" enctype="multipart/form-data" method="POST">
+                        {{ csrf_field() }}
+
+
+                        <div class="form-group">
+                            <label for="date" class="col-form-label">Дата:*</label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="validationTextarea" class="col-form-label">Вопрос:*</label>
+                            <textarea name="question" class="form-control is-invalid" id="validationTextarea"
+                                      required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="validationTextarea2" class="col-form-label">Ответ:*</label>
+                            <textarea name="answer" class="form-control is-invalid" id="validationTextarea2"
+                                      required></textarea>
+                        </div>
+
+                        <div id="sendmessage3">
+                            <span>Ваше сообщение отправлено!</span>
+                        </div>
+                        <div id="errsend3">
+                            При отправке сообщения произошла ошибка. Попробуйте еще раз!
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            <button id="upload" type="submit" class="btn btn-primary">Опубликовать</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     @if(count($questions) > 0)
         <table class="table table-striped">
             <thead class="thead-dark">
@@ -24,26 +86,20 @@
             @foreach($questions as $question)
                 <tr>
                     <th scope="row">
-
                         {{ $question->created_at }}
                     </th>
                     <td>
-
                         {{ $question->question }}
                     </td>
                     <td>
-
-
-
                         {{ $question->answer}}
-
                     </td>
                     <td>
                         <p>
                             <button type="button" class="btn btn-warning" data-dismiss="modal">Редактировать</button>
                         </p>
                         <p>
-                            <button id="" type="submit" class="btn btn-danger" role="button">Удалить</button>
+                            <a href="{{'/delete_question_answer/'}}{{$question->id}}" id="delete_question" class="btn btn-danger" role="button">Удалить</a>
                         </p>
 
                     </td>
