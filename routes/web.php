@@ -46,10 +46,10 @@ Route::post('/sendquestion', 'MailController@sendquestion');
 
 
 //добавление новой записи в таблицу questions
-Route::post('/add_question_answer', 'AdminController@add_question_answer');
+Route::post('/add_question_answer', 'AdminController@add_question_answer')->middleware('auth');
 
 //удаление записи из таблицы questions
-Route::get('/delete_question_answer/{id}', 'AdminController@delete_question_answer');
+Route::post('/delete_question_answer', 'AdminController@delete_question_answer')->middleware('auth');
 
 
 //скачивание пользователем файлов с сервера

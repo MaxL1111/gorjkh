@@ -99,7 +99,12 @@
                             <button type="button" class="btn btn-warning" data-dismiss="modal">Редактировать</button>
                         </p>
                         <p>
-                            <a href="{{'/delete_question_answer/'}}{{$question->id}}" id="delete_question" class="btn btn-danger" role="button">Удалить</a>
+                        <form id="delete_question" enctype="multipart/form-data" method="POST">
+                            {{ csrf_field() }}
+
+                            <input type="hidden"  name="id" value="{{$question->id}}">
+                            <button id="upload" type="submit" class="btn btn-danger">Удалить</button>
+                        </form>
                         </p>
 
                     </td>

@@ -35,8 +35,9 @@ class AdminController extends Controller
 
     }
 
-    public function delete_question_answer($id)
+    public function delete_question_answer(Request $request)
     {
+        $id = $request->id;
         $result = new Question;
         $result->delete_question($id);
 
