@@ -12,7 +12,7 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h4 class="card-title">Кулаго Виктор Андреевич</h4>
-                    <p class="card-text text-muted">Генеральный директор КПУП "Гомельское городское ЖКХ"</p>
+                    <h4><small class="text-muted">Генеральный директор КПУП "Гомельское городское ЖКХ"</small></h4>
                 </div>
             </div>
         </div>
