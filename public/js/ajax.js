@@ -185,3 +185,12 @@ $(function () {
     })
 });
 
+//редактирование записи в таблице questions
+$(function () {
+    $('#ModaEditing').on('click', function (e) {
+
+
+
+
+    })
+});
