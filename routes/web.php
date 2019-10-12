@@ -48,9 +48,14 @@ Route::post('/sendquestion', 'MailController@sendquestion');
 //добавление новой записи в таблицу questions
 Route::post('/add_question_answer', 'AdminController@add_question_answer')->middleware('auth');
 
+//редактирование записи в таблице questions
+Route::post('/editor_question_answer', 'AdminController@update_question_answer')->middleware('auth');
+
 //удаление записи из таблицы questions
 Route::post('/delete_question_answer', 'AdminController@delete_question_answer')->middleware('auth');
 
+//редирект на страницу редактирование записи в таблице questions
+Route::get('/editor/{id}', 'AdminController@edit_question_answer')->middleware('auth');
 
 //скачивание пользователем файлов с сервера
 Route::get('/download/{file_name}', 'DownloadController@getDownload');

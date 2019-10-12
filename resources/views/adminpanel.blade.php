@@ -4,9 +4,7 @@
 
 @section('content')
 
-    <p align="center">
-        <strong><span class="text-danger">Рубрика "Спрашивайте - Ответим":</span></strong>
-    </p>
+    <div class="shadow p-3 mb-5 bg-white rounded"><h5><strong>Админ-панель. Таблица Рубрики "Спрашивайте - Ответим"</strong></h5></div>
 
 
     <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal"
@@ -51,7 +49,7 @@
                         </div>
 
                         <div id="sendmessage3">
-                            <span>Ваше сообщение отправлено!</span>
+                            <span>Добавлена новая запись!</span>
                         </div>
                         <div id="errsend3">
                             При отправке сообщения произошла ошибка. Попробуйте еще раз!
@@ -88,7 +86,7 @@
                     <th scope="row">
                         {{ $question->created_at }}
                     </th>
-                    <td>
+                    <td id="question">
                         {{ $question->question }}
                     </td>
                     <td>
@@ -96,62 +94,14 @@
                     </td>
                     <td>
                         <p>
-                            <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal"
-                                    data-target="#ModaEditing" data-whatever="@mdo">Редактировать</button>
+
+                        <form action="editor/{{$question->id}}" id="editor_question" enctype="multipart/form-data" method="GET">
+                            {{ csrf_field() }}
 
 
-                        <div class="modal fade" id="ModaEditing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Редактор</h5>
+                            <button id="upload" type="submit" class="btn btn-success">Редактировать</button>
+                        </form>
 
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body was-validated">
-
-                                        <form id="form_admin_question_answer" enctype="multipart/form-data" method="POST">
-                                            {{ csrf_field() }}
-
-
-
-                                            <div class="form-group">
-                                                <label for="date" class="col-form-label">Дата:*</label>
-                                                <input type="date" id="date" name="date" class="form-control" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="validationTextarea" class="col-form-label">Вопрос:*</label>
-                                                <textarea name="question" class="form-control is-invalid" id="validationTextarea"
-                                                          required>{{$question->id}}</textarea>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="validationTextarea2" class="col-form-label">Ответ:*</label>
-                                                <textarea name="answer" class="form-control is-invalid" id="validationTextarea2"
-                                                          required>{{$question->answer}}</textarea>
-                                            </div>
-
-                                            <div id="sendmessage3">
-                                                <span>Ваше сообщение отправлено!</span>
-                                            </div>
-                                            <div id="errsend3">
-                                                При отправке сообщения произошла ошибка. Попробуйте еще раз!
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                                                <button id="upload" type="submit" class="btn btn-primary">Опубликовать</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
 
                         </p>
@@ -159,7 +109,7 @@
                         <form id="delete_question" enctype="multipart/form-data" method="POST">
                             {{ csrf_field() }}
 
-                            <input type="hidden"  name="id" value="{{$question->id}}">
+                            <input type="hidden" name="id_delete" value="{{$question->id}}">
                             <button id="upload" type="submit" class="btn btn-danger">Удалить</button>
                         </form>
                         </p>

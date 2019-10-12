@@ -37,11 +37,29 @@ class AdminController extends Controller
 
     public function delete_question_answer(Request $request)
     {
-        $id = $request->id;
+        $id = $request->id_delete;
         $result = new Question;
         $result->delete_question($id);
 
     }
 
+
+    public function edit_question_answer($id)
+    {
+        $questions = new Question();
+        return view('editor',['questions' => $questions->find_one($id)]);
+
+    }
+
+    public function update_question_answer(Request $request)
+    {
+        $id = $request->id;
+        $created_at = $request->date;
+        $question = $request->question;
+        $answer = $request->answer;
+        $result = new Question;
+        $result->update_question($id, $created_at, $question, $answer);
+
+    }
 
 }
