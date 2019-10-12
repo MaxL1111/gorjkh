@@ -106,8 +106,10 @@
 
                         </p>
                         <p>
-                        <form id="delete_question" enctype="multipart/form-data" method="POST">
+                        <form action="/delete_question_answer/{{$question->id}}" enctype="multipart/form-data" method="POST">
                             {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+
 
                             <input type="hidden" name="id_delete" value="{{$question->id}}">
                             <button id="upload" type="submit" class="btn btn-danger">Удалить</button>

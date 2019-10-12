@@ -35,11 +35,12 @@ class AdminController extends Controller
 
     }
 
-    public function delete_question_answer(Request $request)
+    public function delete_question_answer($id_delete)
     {
-        $id = $request->id_delete;
+
         $result = new Question;
-        $result->delete_question($id);
+        $result->delete_question($id_delete);
+        return redirect('/adminpanel');
 
     }
 

@@ -153,37 +153,6 @@ $(function () {
     })
 });
 
-//удаление записи из таблицы questions
-$(function () {
-    $('#delete_question').on('submit', function (e) {
-        e.preventDefault()
-        var form = $(this); // Предположу, что этот код выполняется в обработчике события 'submit' формы
-        var data = new FormData();  // Для отправки файлов понадобится объект FormData. Подробнее про него можно прочитать в документации - https://developer.mozilla.org/en-US/docs/Web/API/FormData
-
-
-        // Сбор данных из обычных полей
-        form.find(':input[name]').not('[type="file"]').each(function () {
-            var field = $(this);
-            data.append(field.attr('name'), field.val());
-        });
-
-
-        // Отправка данных
-        var url = '/delete_question_answer';
-
-        $.ajax({
-            url: url,
-            type: 'POST',
-            data: data,
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function (data) {
-                alert('запись удалена!');
-            }
-        });
-    })
-});
 
 //редактирование записи в таблице questions
 $(function () {

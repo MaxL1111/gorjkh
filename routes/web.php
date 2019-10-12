@@ -52,7 +52,7 @@ Route::post('/add_question_answer', 'AdminController@add_question_answer')->midd
 Route::post('/editor_question_answer', 'AdminController@update_question_answer')->middleware('auth');
 
 //удаление записи из таблицы questions
-Route::post('/delete_question_answer', 'AdminController@delete_question_answer')->middleware('auth');
+Route::delete('/delete_question_answer/{id_delete}', 'AdminController@delete_question_answer')->middleware('auth');
 
 //редирект на страницу редактирование записи в таблице questions
 Route::get('/editor/{id}', 'AdminController@edit_question_answer')->middleware('auth');

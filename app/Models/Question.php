@@ -31,9 +31,9 @@ class Question extends Model
 
     public function delete_question($id_delete)
     {
-       // DB::table('questions')->where('id',$id)->delete();
-        DB::delete('delete from questions where id = ?',
-            [$id_delete] );
+        DB::table('questions')->where('id',$id_delete)->delete();
+      //  DB::delete('delete from questions where id = ?',
+     //       [$id_delete] );
 
     }
 
