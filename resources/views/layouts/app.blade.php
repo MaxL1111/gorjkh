@@ -22,7 +22,7 @@
 
 </head>
 <body id="body">
-<div id="main_style" class="container-fluid">
+<div id="main_style" class="container">
     @section('navbar')
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -100,10 +100,9 @@
                         <a href="{{'/about'}}" class="text-dark nav-link list-group-item">О нас</a>
                     </div>
                 </div>
-
             </div>
 
-            <div class="col">
+            <div class="col-lg-7">
 
                 <div class="card-body">
                     @yield('content')
@@ -111,19 +110,69 @@
 
             </div>
 
+            <div class="col-lg-3">
+
+
+                <div class="list-group" role="tablist">
+                    <a href="#" class="list-group-item list-group-item-action">
+                    <img src="{{ URL::to('/images/rightnav/1mingkh.png') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                    <img src="{{ URL::to('/images/rightnav/2portal.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/3gomispolkom.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/4zemleustrsluzhba.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/5gogkh.png') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/6pravoby.png') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/7portpres.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/8profsouz.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/9zkh.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/10pravitelstvorb.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/11gomloblis.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/12portalkg.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/13mchs.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="{{ URL::to('/images/rightnav/14musorenot.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 
-@section('footer')
+    @section('footer')
 
-    <div id="footer">
+        <div id="footer">
 
-        <p><strong>Официальный сайт КПУП "Гомельское городское ЖКХ"</strong>
-            <br>
-        <span id="footer_text_small" class="small">246050, Республика Беларусь, г.Гомель, ул.Советская, д.12</span>
-        </p>
+            <p><strong>Официальный сайт КПУП "Гомельское городское ЖКХ"</strong>
+                <br>
+                <span id="footer_text_small"
+                      class="small">246050, Республика Беларусь, г.Гомель, ул.Советская, д.12</span>
+            </p>
 
-            <div  class="container">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm">
                         <p><strong>Новости</strong></p>
@@ -164,10 +213,10 @@
                 </div>
             </div>
 
-        <hr id="line">
-        <span id="footer_text_small"><strong>Соглашение о пользовании информационными системами и ресурсами города Гомеля</strong></span>
+            <hr id="line">
+            <span id="footer_text_small"><strong>Соглашение о пользовании информационными системами и ресурсами города Гомеля</strong></span>
 
-    </div>
+        </div>
 
 
 @show

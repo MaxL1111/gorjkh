@@ -6,7 +6,7 @@
 
     <div class="card mb-3" style="max-width: 100%;  ">
         <div class="row no-gutters">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <img src="{{ URL::to('/images/director.jpg') }}" class="img-fluid" alt="...">
             </div>
             <div class="col-md-8">
@@ -73,7 +73,7 @@
         <div class="col-sm-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Подоходный налог с физических лиц при сдаче внаем помещений</h5>
+                    <h5 class="card-title">Подоходный налог с физлиц при сдаче внаем помещений</h5>
                     <p class="card-text">Порядок налогообложения доходов, полученных физическими лицами ...</p>
                     <a href="{{'/download/podoh_nalog.pdf'}}" class="btn btn-primary">Скачать брошюру</a>
                 </div>
