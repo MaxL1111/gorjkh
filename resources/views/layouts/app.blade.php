@@ -77,7 +77,11 @@
         <br>
 
         <div class="shadow-none p-3 mb-5 bg-light rounded">
-            <h2><strong>Коммунальное производственное унитарное предприятие "Гомельское городское ЖКХ"</strong></h2>
+            <h2>
+                <strong>
+                    Коммунальное производственное унитарное предприятие "Гомельское городское ЖКХ"
+                </strong>
+            </h2>
         </div>
 
     @show
@@ -91,12 +95,12 @@
 
                         <a href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
                         <a href="{{'/dispatcher'}}" class="text-dark nav-link list-group-item">Диспетчерская</a>
-                        <a href="#" class="text-dark nav-link list-group-item">Тарифы</a>
+                        <a href="{{'/rates'}}" class="text-dark nav-link list-group-item">Тарифы</a>
                         <a href="{{'/sport'}}" class="text-dark nav-link list-group-item">Спорт</a>
                         <a href="#" class="text-dark nav-link list-group-item">Документы</a>
                         <a href="{{'/contacts'}}" class="text-dark nav-link list-group-item">Контакты</a>
                         <a href="{{'/appeals'}}" class="text-dark nav-link list-group-item">Обращения</a>
-                        <a href="#" class="text-dark nav-link list-group-item">Отделы</a>
+                        <a href="{{'/departments'}}" class="text-dark nav-link list-group-item">Отделы</a>
                         <a href="{{'/about'}}" class="text-dark nav-link list-group-item">О нас</a>
                     </div>
                 </div>
@@ -114,48 +118,61 @@
 
 
                 <div class="list-group" role="tablist">
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.mjkx.gov.by/" class="list-group-item list-group-item-action">
                     <img src="{{ URL::to('/images/rightnav/1mingkh.png') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://portal.gov.by/" class="list-group-item list-group-item-action">
                     <img src="{{ URL::to('/images/rightnav/2portal.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.gorod.gomel.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/3gomispolkom.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://gomeloblzem.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/4zemleustrsluzhba.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://ugkh.gomel.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/5gogkh.png') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.pravo.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/6pravoby.png') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.president.gov.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/7portpres.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.kommunalnik.gomel.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/8profsouz.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.gkhmag.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/9zkh.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.government.gov.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/10pravitelstvorb.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://www.gomel-region.gov.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/11gomloblis.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://gkx.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/12portalkg.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://mchs.gov.by/" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/13mchs.jpg') }}" class="card-img-top" alt="...">
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="http://gorjkh.gomel.by/Target99.html" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/14musorenot.jpg') }}" class="card-img-top" alt="...">
                     </a>
+
+
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- gorgkh1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-2170526760365877"
+                         data-ad-slot="9930890799"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
 

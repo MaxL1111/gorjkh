@@ -35,6 +35,14 @@ Route::get('/sport', function () {
     return view('sport');
 });
 
+Route::get('/departments', function () {
+    return view('departments');
+});
+
+Route::get('/rates', function () {
+    return view('rates');
+});
+
 
 Route::get('/question', 'QuestionController@all_question');
 

@@ -1,9 +1,9 @@
-#body{
+#body {
     background-color: #D0D0D0;
-   /* margin:0 130px 0 130px;*/
+    /* margin:0 130px 0 130px;*/
 }
 
-#main_style{
+#main_style {
     background-color: #ffffff;
 }
 
@@ -38,7 +38,7 @@
 
 /* страница main */
 
-#line_main{
+#line_main {
     border: none; /* Убираем границу */
     background-color: #333333; /* Цвет линии */
     color: black; /* Цвет линии для IE6-7 */
@@ -47,25 +47,37 @@
 
 
 /* блок footer */
-#footer{
+#footer {
     padding: 24px 28px;
     background-color: #171919;
     color: #FFFFFF;
 }
 
-#footer_text_small{
+#footer_text_small {
     color: #8D939C;
 }
 
-#footer_list{
+#footer_list {
     color: #8D939C;
     font-size: 14px;
 }
 
-#line{
+#line {
     border: none; /* Убираем границу */
     background-color: #474747; /* Цвет линии */
     color: #6c757d; /* Цвет линии для IE6-7 */
     height: 1px; /* Толщина линии */
 }
 
+td.table_departments_fist_td {
+    width: 40%;
+}
+
+.container{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+#left_navbar a:hover{
+color: #c92723 !important;
+}
