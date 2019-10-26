@@ -5,11 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="/css/style.css" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/app.css" rel="stylesheet">
 
     <!-- Подключаем иконки -->
     <script src="https://kit.fontawesome.com/59c86a6755.js"></script>
@@ -21,7 +17,7 @@
 
 
 </head>
-<body id="body">
+<body>
 <div id="main_style" class="container">
     @section('navbar')
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -89,24 +85,46 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-12">
                 <div class="row">
                     <div id="left_navbar" class="nav-link font-weight-bold list-group list-group-flush">
 
-                        <a href="{{'/'}}" class="text-dark nav-link list-group-item">Главная</a>
-                        <a href="{{'/dispatcher'}}" class="text-dark nav-link list-group-item">Диспетчерская</a>
-                        <a href="{{'/rates'}}" class="text-dark nav-link list-group-item">Тарифы</a>
-                        <a href="{{'/sport'}}" class="text-dark nav-link list-group-item">Спорт</a>
-                        <a href="#" class="text-dark nav-link list-group-item">Документы</a>
-                        <a href="{{'/contacts'}}" class="text-dark nav-link list-group-item">Контакты</a>
-                        <a href="{{'/appeals'}}" class="text-dark nav-link list-group-item">Обращения</a>
-                        <a href="{{'/departments'}}" class="text-dark nav-link list-group-item">Отделы</a>
-                        <a href="{{'/about'}}" class="text-dark nav-link list-group-item">О нас</a>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{'/'}}">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/dispatcher'}}">Диспетчерская</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/rates'}}">Тарифы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/sport'}}">Спорт</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Документы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/contacts'}}">Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/appeals'}}">Обращения</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/departments'}}">Отделы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/about'}}">О&nbspнас</a>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-7">
 
                 <div class="card-body">
                     @yield('content')
@@ -114,7 +132,7 @@
 
             </div>
 
-            <div class="col-lg-3">
+            <div id="right_navbar" class="col-lg-3 col-md-5">
 
 
                 <div class="list-group" role="tablist">
@@ -162,17 +180,18 @@
                     </a>
 
 
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- gorgkh1 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-2170526760365877"
-                         data-ad-slot="9930890799"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- gorgkh1 -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-2170526760365877"
+                             data-ad-slot="9930890799"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
                 </div>
             </div>
 

@@ -47,7 +47,7 @@
     <hr id="line_main">
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Уважаемые жители!</h5>
@@ -56,7 +56,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <span class="invisible_symbol">&nbsp</span>
+
+        <div class="col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Как не стать жертвой кибермошенников!</h5>
@@ -70,7 +72,7 @@
     <br>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Подоходный налог с физлиц при сдаче внаем помещений</h5>
@@ -79,7 +81,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <span class="invisible_symbol">&nbsp</span>
+        <div class="col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Информация о действующих службах</h5>
@@ -146,8 +149,7 @@
         </li>
         <li class="list-group-item text-justify">Гомельский горисполком предлагает к продаже
             и сдаче в аренду ряд объектов недвижимого имущества, подробную информацию Вы можете получить,
-            обратившись по телефонам:
-            <br>21-25-60, 34-16-48.
+            обратившись по телефонам: 21-25-60, 34-16-48.
         </li>
     </div>
 
