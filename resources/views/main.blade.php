@@ -6,10 +6,10 @@
 
     <div class="card mb-3" style="max-width: 590px;">
         <div class="row no-gutters">
-            <div class="col-5 col-sm-5 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-3 col-sm-3 col-md-6 col-lg-4 col-xl-3">
                 <img src="{{ URL::to('/images/director.jpg') }}" class="img-fluid" alt="...">
             </div>
-            <div class="col-7 col-sm-7 col-md-6 col-lg-8 col-xl-9">
+            <div class="col-9 col-sm-9 col-md-6 col-lg-8 col-xl-9">
                 <div class="card-body">
                     <h5 id="name_director" class="card-title"><span class="name_director">Кулаго Виктор Андреевич</span></h5>
                     <h5 id="discr_director"><small class="text-muted">Генеральный директор КПУП "Гомельское городское ЖКХ"</small></h5>
