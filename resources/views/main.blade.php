@@ -6,10 +6,10 @@
 
     <div class="card mb-3" style="max-width: 590px;">
         <div class="row no-gutters">
-            <div class="col-3 col-sm-3 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-4 col-sm-3 col-md-6 col-lg-4 col-xl-3">
                 <img src="{{ URL::to('/images/director.jpg') }}" class="img-fluid" alt="...">
             </div>
-            <div class="col-9 col-sm-9 col-md-6 col-lg-8 col-xl-9">
+            <div class="col-8 col-sm-9 col-md-6 col-lg-8 col-xl-9">
                 <div class="card-body">
                     <h5 id="name_director" class="card-title"><span class="name_director">Кулаго Виктор Андреевич</span></h5>
                     <h5 id="discr_director"><small class="text-muted">Генеральный директор КПУП "Гомельское городское ЖКХ"</small></h5>
@@ -62,7 +62,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Как не стать жертвой кибермошенников!</h5>
-                    <p class="card-text">Надежные пароли, безопасный WI-FI ...</p>
+                    <p class="card-text">Надежные пароли, безопасный WI-FI...</p>
                     <a href="{{'/download/info_security.pdf'}}" class="btn btn-primary">Скачать брошюру</a>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Подоходный налог с физлиц при сдаче внаем помещений</h5>
-                    <p class="card-text">Порядок налогообложения доходов, полученных физическими лицами ...</p>
+                    <p class="card-text">Порядок налогообложения доходов, полученных физическими лицами...</p>
                     <a href="{{'/download/podoh_nalog.pdf'}}" class="btn btn-primary">Скачать брошюру</a>
                 </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Информация о действующих службах</h5>
-                    <p class="card-text">Службы, оказывающие медицинскую, социальную и психологическую помощь ...</p>
+                    <p class="card-text">Службы, оказывающие медицинскую, социальную и психологическую помощь...</p>
                     <a href="{{'/download/helper_service.pdf'}}" class="btn btn-primary">Скачать брошюру</a>
                 </div>
             </div>

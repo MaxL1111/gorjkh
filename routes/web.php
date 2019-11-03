@@ -43,6 +43,10 @@ Route::get('/rates', function () {
     return view('rates');
 });
 
+Route::get('/documents', function () {
+    return view('documents');
+});
+
 
 Route::get('/question', 'QuestionController@all_question');
 

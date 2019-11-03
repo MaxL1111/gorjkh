@@ -137,7 +137,7 @@
                                 <a class="nav-link" href="{{'/sport'}}">Спорт</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Документы</a>
+                                <a class="nav-link" href="{{'/documents'}}">Документы</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{'/contacts'}}">Контакты</a>
@@ -211,18 +211,6 @@
                     <a href="http://gorjkh.gomel.by/Target99.html" class="list-group-item list-group-item-action">
                         <img src="{{ URL::to('/images/rightnav/14musorenot.jpg') }}" class="card-img-top" alt="...">
                     </a>
-
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- gorgkh1 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-2170526760365877"
-                         data-ad-slot="9930890799"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
 
 
                 </div>
