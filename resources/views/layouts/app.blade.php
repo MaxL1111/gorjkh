@@ -105,7 +105,11 @@
 
 
 
-        <div class="shadow-none p-3 mb-5 bg-light rounded">
+        <div class="qwe">
+
+
+            <img class="gerb" src="{{ URL::to('/images/gerb.svg') }}" alt="...">
+<br>
             <h2>
                 <strong>
                     Коммунальное производственное унитарное предприятие "Гомельское городское ЖКХ"
